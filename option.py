@@ -28,6 +28,9 @@ def delta(st,k,r,T,sigma,n=1):
     return delta
 
 def gamma(st,k,r,T,sigma):
+    '''
+    期权gamma值
+    '''
     d1 = (log(st/k)+(r+1/2*sigma)*T)/(sigma*sqrt(T))
     gamma = stats.norm.pdf(d1)/(st*sigma*sqrt(T))
     return gamma
